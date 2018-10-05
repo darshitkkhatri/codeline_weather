@@ -1,0 +1,46 @@
+<h1>
+  City : {{weatherData.title}}
+</h1>
+<h3>
+  timezone :  {{weatherData.timezone}}
+</h3>
+
+
+<table class="table  ">
+  <thead>
+    <tr>
+      <th scope="col">weather_state_name</th>
+      <th scope="col">weather_state_abbr</th>
+      <th scope="col">Dwind_direction_compassue</th>
+      <th scope="col">created</th>
+      <th scope="col">applicable_date</th>
+      <th scope="col">min_temp</th>
+      <th scope="col">max_temp</th>
+      <th scope="col">the_temp</th>
+      <th scope="col">wind_speed</th>
+      <th scope="col">wind_direction</th>
+      <th scope="col">air_pressure</th>
+      <th scope="col">humidity</th>
+      <th scope="col">visibility</th>
+      <th scope="col">predictability</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let weather of weatherData.consolidated_weather">
+      <td>{{weather.weather_state_name}}</td>
+      <td>{{weather.weather_state_abbr}}</td>
+      <td>{{weather.wind_direction_compass}}</td>
+      <td>{{weather.created}}</td>
+      <td>{{weather.applicable_date}}</td>
+      <td>{{weather.min_temp}}</td>
+      <td>{{weather.max_temp}}</td>
+      <td>{{weather.the_temp}}</td>
+      <td>{{weather.wind_speed}}</td>
+      <td>{{weather.wind_direction}}</td>
+      <td>{{weather.air_pressure}}</td>
+      <td>{{weather.humidity}}</td>
+      <td>{{weather.visibility}}</td>
+      <td>{{weather.predictability}}</td>
+    </tr>
+  </tbody>
+</table>
